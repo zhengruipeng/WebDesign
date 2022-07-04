@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/main/main.css" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/main/memorandum-page.css" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/main/information-page.css" />
+    <link rel="stylesheet" type="text/css" href="../public/notification/notification-style.css" />
+</head>
+<body>
+<header>
+<!--    <nav id="student-table-nav">操作学生表</nav>-->
+    <nav id="course-table-nav">选择课程
+        <ul>
+            <li>选择新课程</li>
+            <li>已选课成绩</li>
+        </ul>
+    </nav>
+    <nav id="course-teacher-nav">教师查看课程信息</nav>
+    <nav id="account-manager">账户管理
+        <ul>
+            <li>管理学生</li>
+            <li>管理教师</li>
+            <li>管理管理员</li>
+        </ul>
+    </nav>
+    <nav>课程投票</nav>
+</header>
+<main>
+    <div class="arrow" id="to-pre-page">></div>
+    <div class="arrow" id="to-next-page">></div>
+    <section class="page main-cur-page">
+        <div id="memorandum-page-container" class="container">
+            <h1>您好<span></span></h1>
+            <p>今日待办事项如下：</p>
+            <ul>
+                <li>您可以去选课了</li>
+                <li>您可以去给课程投票了</li>
+                <li>web前端成绩出来了：成绩XXX，绩点：0</li>
+                <li>javaWeb成绩出来了：成绩XXX，绩点：0</li>
+            </ul>
+        </div>
+    </section>
+    <section class="page main-next-page">
+        <div id="information-page-container" class="container">
+            <div id="picture-info">
+                <img src="../images/head.jpg"  alt=""/>
+                <div>
+                    <a id="change-personal-info-add" href="#">修改个人信息</a> |
+                    <a href="javascript:
+                        sessionStorage.setItem('username',undefined);
+                        location = './login.html'">退出登录</a>
+                </div>
+            </div>
+            <dl>
+                <!--<dt>姓名</dt>
+                <dd>xxx</dd>
+                <dt>入学时间</dt>
+                <dd>20xx</dd>
+                <dt>生日</dt>
+                <dd>1950</dd>-->
+            </dl>
+
+        </div>
+    </section>
+    <section class="page main-next-page">
+        第3页
+    </section>
+    <section class="page main-next-page">
+        第4页
+    </section>
+</main>
+<aside>
+
+</aside>
+<footer>
+
+</footer>
+<script type="module" src="../plugins/fetch2.js"></script>
+<script type="module" src="../modules/main/get-student-info.js"></script>
+<script type="module" src="../modules/main/UI.js"></script>
+<script type="module" src="../modules/main/nav-event.js"></script>
+<script type="module" src="../modules/main/change-personal-info.js"></script>
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded",function(){
+
+    })
+</script>
+</body>
+</html>
